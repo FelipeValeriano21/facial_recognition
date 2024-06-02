@@ -9,8 +9,6 @@ largura, altura = 220, 220
 
 # Dicionário de mapeamento de IDs para nomes (ajuste conforme necessário)
 id_para_nome = {
-    2000: "Felipe",
-    1000: "Lucas",
     # Adicione todos os mapeamentos necessários aqui
 }
 
