@@ -12,6 +12,9 @@ id_para_nome = {
     # Adicione todos os mapeamentos necessários aqui
 }
 
+
+print(id_para_nome)
+
 # Função para detectar a face na imagem e retornar a face redimensionada
 def detecta_face(imagem):
     imagemCinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
@@ -42,8 +45,8 @@ while True:
         face, bbox = detecta_face(frame)
         if face is not None:
             id, confianca = reconhece_face(face)
-            nome = id_para_nome.get(id, "Desconhecido")
-            print(f"Essa imagem é do ID: {nome} com confiança: {confianca:.2f}")
+            nome = id_para_nome.get(id)
+            print(f"Essa imagem é do ID: {id} com confiança: {confianca/100:.2f} %")
         else:
             print("Nenhuma face detectada.")
         break
