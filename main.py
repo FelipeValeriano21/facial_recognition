@@ -9,16 +9,19 @@ classificadorFace = cv2.CascadeClassifier('content/haarcascade_frontalface_defau
 cap = cv2.VideoCapture(0)
 count = 0
 
+# Leer los datos del formulario desde el archivo
+with open("dados_aluno.txt", "r") as f:
+    ra = f.readline().strip()
+    nombre = f.readline().strip()
+    professor = f.readline().strip()
+    senha = f.readline().strip()
+
 # Dicionário para mapear IDs para nomes
-id_para_nome = {}
+id_para_nome = {int(ra): nombre}
 
-
-# Função para cadastrar um novo aluno e associar um nome a ele
+# Función para cadastrar un novo aluno y associar un nome a él
 def cadastrar_novo_aluno():
-    nome = input("Digite o nome do aluno: ")
-    id_aluno = int(input("Digite o ID do aluno: "))
-    id_para_nome[id_aluno] = nome
-    return id_aluno
+    return int(ra)
 
 # Solicitar cadastro de novo aluno
 id_aluno = cadastrar_novo_aluno()
@@ -45,7 +48,10 @@ while count < numeroAmostra:
             count += 1
             if count >= numeroAmostra:
                 break
-print(id_para_nome)
+
+# Señal de éxito
+with open("captura_exitosa.txt", "w") as f:
+    f.write("Captura de fotos exitosa")
 
 cap.release()
 cv2.destroyAllWindows()

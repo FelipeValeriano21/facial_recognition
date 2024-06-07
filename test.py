@@ -1,5 +1,7 @@
 import cv2
 import numpy as np
+import conn
+from datetime import datetime
 
 # Carregar o classificador treinado
 classificadorFace = cv2.CascadeClassifier('content/haarcascade_frontalface_default.xml')
@@ -30,7 +32,6 @@ def reconhece_face(face):
     return id, confianca
 
 cap = cv2.VideoCapture(0)
-print("Pressione ESC para capturar a imagem e verificar o reconhecimento.")
 
 while True:
     ret, frame = cap.read()
@@ -46,7 +47,12 @@ while True:
         if face is not None:
             id, confianca = reconhece_face(face)
             nome = id_para_nome.get(id)
-            print(f"Essa imagem é do ID: {id} com confiança: {confianca/100:.2f} %")
+            data = datetime.now()
+            presenca = 1
+            conn_chamada = conn.Connection()
+            conn_chamada.inserir_chamada(id, presenca, data)
+            print(f"Atenção aluno do ra final: {id}, sua presença foi confirmado na aula as {data}")
+
         else:
             print("Nenhuma face detectada.")
         break

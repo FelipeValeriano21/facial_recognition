@@ -6,6 +6,7 @@ import os
 # Carregar a rede de detecção de faces e o classificador treinado
 network = cv2.dnn.readNetFromCaffe('content/deploy.prototxt.txt', 'content/res10_300x300_ssd_iter_140000.caffemodel')
 classificadorFace = cv2.CascadeClassifier('content/haarcascade_frontalface_default.xml')
+
 def detecta_face(network, path_imagem, conf_min=0.7):
     imagem = Image.open(path_imagem).convert('L')
     imagem = np.array(imagem, 'uint8')
@@ -27,7 +28,6 @@ def detecta_face(network, path_imagem, conf_min=0.7):
                 face = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
                 break  # Sair do loop após encontrar a primeira detecção válida
     return face
-
 
 def get_image_data():
     image_dir = 'imagens'
@@ -59,3 +59,7 @@ ids, faces = get_image_data()
 eigen_classifier = cv2.face.EigenFaceRecognizer_create()
 eigen_classifier.train(faces, ids)
 eigen_classifier.write('content/eigen_classifier.yml')
+
+# Crear un archivo de señalización para indicar que el entrenamiento ha finalizado
+with open("entrenamiento_exitoso.txt", "w") as f:
+    f.write("Entrenamiento exitoso")
