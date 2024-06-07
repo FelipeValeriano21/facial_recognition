@@ -1,4 +1,4 @@
-# Facial Recognition for College Attendance
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/2c2aace7-4882-4863-91a8-1489d1a88912)# Facial Recognition for College Attendance
 
 ## Description
 
@@ -23,14 +23,61 @@ This Python program is designed for college attendance management through facial
     ```
 3. install the dependencies using pip:
     ```
-    pip install -r requirements.txt
+    pip install 
     ```
 
-## Uso
+## Use
 
 1. Execut the program`app.py`:
 
 2. follow the instructions in the first screen.
 3. enjoy the system!
+
+# Example 
+
+Student: Felipe Valeriano 
+RA: 2028 
+
+Home Page
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/bc350194-af3e-43e9-a066-340aa1af7e7e)
+
+
+Register Student
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/b821da18-0fb4-40a7-b0f5-eab47a0b98f6)
+
+
+Register photos 
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/3750793e-9453-4d82-a39f-9f7912ed4e50)
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/ca6867c9-46ac-4851-bfd9-1cfb996fc4ca)
+
+
+Training the model 
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/077cc610-a4b4-4b69-8260-064f3ebe9341)
+
+
+testing 
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/e5eb5c16-6529-48f6-b7e1-d69a75a2b7c3)
+
+
+Result
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/0eb54ca3-b249-4af4-b4c2-f7ec43262ad8)
+
+
+Painel 
+
+![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/a6a38f46-56b3-4510-85b9-1178e990f897)
+
+
+
+
+
+
 
 
