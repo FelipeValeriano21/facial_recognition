@@ -10,13 +10,13 @@ class Formulario:
     def __init__(self):
         self.form_window = Toplevel()
         self.form_window.title("Formulário")
-        self.form_window.config(bg="lightgreen")
+        self.form_window.config(bg="black")
         self.form_window.minsize(300, 300)
         self.center_window(self.form_window)
 
         style = ttk.Style()
-        style.configure("TFrame", background="lightgreen")
-        style.configure("TLabel", background="lightgreen")
+        style.configure("TFrame", background="black")
+        style.configure("TLabel", background="black")
         style.configure("TButton", background="lightgreen")
 
         frm = ttk.Frame(self.form_window, padding=20, style="TFrame")

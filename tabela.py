@@ -5,20 +5,20 @@ import conn
 class TabelaSimples:
     def __init__(self):
         self.tabela_window = Toplevel()
-        self.tabela_window.title("Tabela Simples")
+        self.tabela_window.title("Painel de chamada dos alunos")
 
         self.conn = conn.Connection()
 
         style = ttk.Style()
-        style.configure("TFrame", background="lightblue")
-        style.configure("TLabel", background="lightblue", font=("Helvetica", 16))
+        style.configure("TFrame", background="black")
+        style.configure("TLabel", background="black", font=("Helvetica", 16))
         style.configure("Treeview.Heading", font=("Helvetica", 12, "bold"))
         style.configure("Treeview", font=("Helvetica", 10))
 
         main_frame = ttk.Frame(self.tabela_window, padding=20, style="TFrame")
         main_frame.grid(sticky=(N, S, E, W))
 
-        titulo = ttk.Label(main_frame, text="Título da Tabela", style="TLabel")
+        titulo = ttk.Label(main_frame, text="Painel de chamada dos alunos presentes", style="TLabel")
         titulo.grid(row=0, column=0, pady=10, padx=5, sticky=W)
 
         self.tree = ttk.Treeview(main_frame, columns=("col1", "col2", "col3"), show="headings")
