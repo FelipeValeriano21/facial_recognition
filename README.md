@@ -2,8 +2,10 @@
 
 ## Description
 
-This Python program is designed for college attendance management through facial recognition. It leverages OpenCV for face detection and recognition, providing a seamless solution for tracking student attendance. With the ability to detect faces in images or live video streams, store them in a database, and initiate attendance calls based on facial recognition, it streamlines the attendance process for college classes or events.
+This Python program is designed for college attendance management through facial recognition. It leverages OpenCV for face detection and recognition, providing a seamless solution for tracking student attendance. 
  
+![Face-Recognition-Student-Attendance-Management-System-1](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/ef87fe9f-ce46-4192-974a-196002f69131)
+
 
 ## Functionality
 
