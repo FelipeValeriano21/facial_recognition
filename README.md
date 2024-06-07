@@ -1,4 +1,4 @@
-![image](https://github.com/FelipeValeriano21/facial_recognition/assets/101677047/2c2aace7-4882-4863-91a8-1489d1a88912)# Facial Recognition for College Attendance
+# Facial Recognition for College Attendance
 
 ## Description
 
